@@ -46,6 +46,25 @@ let pokemonTeam = [
 
 // for in 
 
+let favouritePokemon = {
+	name:"blastoise",
+	type: "water",
+}
+
+for(let property in favouritePokemon){
+	console.log(`${property} value in favouritePokemon is ${favouritePokemon[property]}`);
+
+	//favouritePokemon.property <-- won't work, no property declared in lines 49-52
+	//favouritePokemon.name  <-- will work, name was declared in property
+}
+
+
+// for of 
+
+for(let property of Object.entries(favouritePokemon)){
+	console.log("proprety from for-of is: " + property);
+}
+
 
 
 
