@@ -86,8 +86,81 @@ let someFunctionWithCallback = (someMessage, someCallback) => {
 someFunctionWithCallback("hello world", console.log);
 
 
-let someForm = (inputBox, callback) => {
-	callback(inputBox);
+// let someForm = (inputBox, callback) => {
+// 	callback(inputBox);
+// }
+
+// someForm(emailBox, validateEmail);
+
+
+
+// blocks and scope 
+
+
+//{
+
+// counter = 0; equivalent to below:
+// var counter = 0;
+
+// for (let index = 0; index <= 10; index++) 
+// {
+// 	var counter = 5;
+// 	counter++;
+// }
+
+// console.log(counter);
+
+// }
+
+
+
+// closures 
+
+// function GameData(){
+
+// 	let highScore = 0;
+
+// 	function setHighScore(newNumber){
+// 		highScore = newNumber;
+// 	}
+
+// 	setHighScore(99);
+// 	return highScore;
+// }
+
+// console.log(GameData());
+
+
+let eevee = {
+	name: "Eevee",
+	type:"normal",
+	attack: function () {
+		console.log("Eevee did an attack!");
+	},
+	ability: () => {
+		console.log("Some ability was triggered!!! Woohoo!");
+	},
+	hobbies: {
+		cycling: {
+			skillLevel: "high"
+		}
+	}
 }
 
-someForm(emailBox, validateEmail);
+// eevee.attack;
+// eevee.attack();
+// eevee.ability();
+
+let eeveeAbility = eevee.ability;
+let eeveeCyclingSkillLevel = eevee.hobbies.cycling.skillLevel;
+let {ability, attack, name, type, hobbies: { cycling: {skillLevel}}} = eevee;
+
+console.log("Eevee's cycling skill level is: " + skillLevel);
+console.log("Eevee cycling skill with dot notation: " + eeveeCyclingSkillLevel);
+
+// No unintended variables declared!
+// console.log("Unintented variables: " + hobbies);
+
+
+eeveeAbility();
+ability();
