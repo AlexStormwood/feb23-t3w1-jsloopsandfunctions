@@ -18,28 +18,28 @@ let pokemonTeam = [
 
 // for loops
 // for (counter, condition, incrementer){action}
-for(let i = 2; i < pokemonTeam.length; i+=2){
-	console.log(pokemonTeam[i] + " is at index " + i);
-}
+// for(let i = 2; i < pokemonTeam.length; i+=2){
+// 	console.log(pokemonTeam[i] + " is at index " + i);
+// }
 
 
 // for of 
-let counter = 2;
-for (const [index, pokemonName] of pokemonTeam.entries()) {
-	if (index < 2){
-		continue;
-	}
-	if (index == counter){
-		console.log(pokemonTeam[index] + " is at index " + index);
-		counter += 2;
-	}
-}
+// recreate that specific counting that the above for loop is doing:
+// let counter = 2;
+// for (const [index, pokemonName] of pokemonTeam.entries()) {
+// 	if (index < 2){
+// 		continue;
+// 	}
+// 	if (index == counter){
+// 		console.log(pokemonTeam[index] + " is at index " + index);
+// 		counter += 2;
+// 	}
+// }
 
-
+// standard for of
 // logs all Pokemon in the team:
 // for (let currentPokemon of pokemonTeam) {
 // 	console.log(currentPokemon);
-
 // }
 
 
